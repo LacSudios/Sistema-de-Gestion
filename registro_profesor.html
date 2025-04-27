@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Profesores</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-left: 20px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .volver-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .volver-menu a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .volver-menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Profesores</h1>
+        <form action="guardar_profesor.php" method="post">
+            <div class="form-group">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            <div class="form-group">
+                <label>Materias que imparte:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="materias[]" value="Castellano"> Castellano</label>
+                    <label><input type="checkbox" name="materias[]" value="Inglés"> Inglés</label>
+                    <label><input type="checkbox" name="materias[]" value="Matemática"> Matemática</label>
+                    <label><input type="checkbox" name="materias[]" value="Educación Física"> Educación Física</label>
+                    <label><input type="checkbox" name="materias[]" value="Ciencias Naturales"> Ciencias Naturales</label>
+                    <label><input type="checkbox" name="materias[]" value="GHC"> GHC</label>
+                    <label><input type="checkbox" name="materias[]" value="Arte y Patrimonio"> Arte y Patrimonio</label>
+                    <label><input type="checkbox" name="materias[]" value="Innovación Científica"> Innovación Científica</label>
+                    <label><input type="checkbox" name="materias[]" value="Orientación"> Orientación</label>
+                    <label><input type="checkbox" name="materias[]" value="Física"> Física</label>
+                    <label><input type="checkbox" name="materias[]" value="Química"> Química</label>
+                    <label><input type="checkbox" name="materias[]" value="Biología"> Biología</label>
+                    <label><input type="checkbox" name="materias[]" value="Historia de Venezuela"> Historia de Venezuela</label>
+                    <label><input type="checkbox" name="materias[]" value="Geografía de Venezuela"> Geografía de Venezuela</label>
+                    <label><input type="checkbox" name="materias[]" value="Formación Ciudadana"> Formación Ciudadana</label>
+                    <label><input type="checkbox" name="materias[]" value="Historia Universal"> Historia Universal</label>
+                    <label><input type="checkbox" name="materias[]" value="Geografía General"> Geografía General</label>
+                    <label><input type="checkbox" name="materias[]" value="Filosofía"> Filosofía</label>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Registrar Profesor</button>
+        </form>
+        <div class="volver-menu">
+            <a href="index.html">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

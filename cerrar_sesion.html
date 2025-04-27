@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrar Sesión</title>
+</head>
+<body>
+    <h1>Cerrando Sesión...</h1>
+    <p>Has cerrado tu sesión de forma segura.</p>
+    <p><a href="index.html">Volver a la página de inicio de sesión</a></p>
+
+    <script>
+        // En un sistema real, aquí se realizarían las acciones necesarias
+        // para invalidar la sesión del usuario en el servidor.
+        // Después de un breve tiempo, se redirigiría a la página de login.
+        setTimeout(function() {
+            window.location.href = "index.html"; // Reemplaza "index.html" con tu página de inicio de sesión real
+        }, 1500);
+    </script>
+</body>
+</html>

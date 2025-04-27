@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Estudiante por Cédula</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        .resultado h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .resultado p {
+            margin-bottom: 8px;
+        }
+        .volver-menu {
+            margin-top: 20px;
+        }
+        .volver-menu a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .volver-menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consultar Estudiante por Cédula</h1>
+        <form action="buscar_estudiante.php" method="get">
+            <div class="form-group">
+                <label for="cedula">Cédula del Estudiante:</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+            <button type="submit">Buscar Estudiante</button>
+        </form>
+
+        <div id="resultado" class="resultado" style="display: none;">
+            <h2>Información del Estudiante</h2>
+            <p><strong>Cédula:</strong> <span id="cedula_res"></span></p>
+            <p><strong>Nombres:</strong> <span id="nombres_res"></span></p>
+            <p><strong>Apellidos:</strong> <span id="apellidos_res"></span></p>
+            <p><strong>Lugar de Nacimiento:</strong> <span id="lugar_nacimiento_res"></span></p>
+            <p><strong>Fecha de Nacimiento:</strong> <span id="fecha_nacimiento_res"></span></p>
+            <p><strong>Sexo:</strong> <span id="sexo_res"></span></p>
+            <p><strong>Dirección:</strong> <span id="direccion_res"></span></p>
+            <p><strong>Teléfono:</strong> <span id="telefono_res"></span></p>
+            <p><strong>Grado:</strong> <span id="grado_res"></span></p>
+            <p><strong>Sección:</strong> <span id="seccion_res"></span></p>
+        </div>
+
+        <div class="volver-menu">
+            <a href="index.html">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        // Este script se utilizará si decides manejar la búsqueda con AJAX (opcional)
+        // Por ahora, la lógica de visualización de resultados estará en buscar_estudiante.php
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="estilos_formularios.css"> <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        select {
+            appearance: none;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right .5em top 50%, 0 0;
+            background-size: .65em auto, 100%;
+            padding-right: 2.5em;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+        .radio-group label {
+            font-weight: normal;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .volver-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .volver-menu a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .volver-menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Estudiantes</h1>
+        <form action="guardar_estudiante.php" method="post">
+            <div class="form-group">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+                <input type="text" id="lugar_nacimiento" name="lugar_nacimiento">
+            </div>
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <div class="radio-group">
+                    <input type="radio" id="masculino" name="sexo" value="M" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="femenino" name="sexo" value="F" required>
+                    <label for="femenino">Femenino</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div class="form-group">
+                <label for="grado">Grado:</label>
+                <select id="grado" name="grado" required>
+                    <option value="">Seleccionar Grado</option>
+                    <option value="1">1er Grado</option>
+                    <option value="2">2do Grado</option>
+                    <option value="3">3er Grado</option>
+                    <option value="4">4to Grado</option>
+                    <option value="5">5to Grado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="seccion">Sección:</label>
+                <select id="seccion" name="seccion" required>
+                    <option value="">Seleccionar Sección</option>
+                    <option value="A">Sección A</option>
+                    <option value="B">Sección B</option>
+                    <option value="C">Sección C</option>
+                    <option value="D">Sección D</option>
+                    <option value="E">Sección E</option>
+                    <option value="F">Sección F</option>
+                </select>
+            </div>
+            <button type="submit">Registrar Estudiante</button>
+        </form>
+        <div class="volver-menu">
+            <a href="menu_principal.html">Volver al Menú Principal</a>
+        </div>
+    </div>
+</body>
+</html>

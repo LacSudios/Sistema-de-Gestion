@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Calificaciones - Menú Principal</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .grado-item {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .secciones-lista {
+            display: none; /* Oculto por defecto */
+            padding-left: 20px;
+        }
+        .secciones-lista a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .secciones-lista a:hover {
+            background-color: #eee;
+        }
+        .materias-lista {
+            display: none; /* Oculto por defecto */
+            padding-left: 40px;
+        }
+        .materias-lista a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #007bff;
+            padding: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .materias-lista a:hover {
+            text-decoration: underline;
+        }
+        .opciones-generales {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .opciones-generales a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .opciones-generales a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenido, Profesor(a) [Nombre del Profesor Aquí]</h1>
+    <p>Selecciona el grado, la sección y la materia para cargar las calificaciones:</p>
+
+    <div class="grado-item">
+        <h2 onclick="toggleSecciones('grado1')">1er Grado</h2>
+        <div id="grado1" class="secciones-lista">
+            <a onclick="toggleMaterias('grado1-A')">Sección A</a>
+            <div id="grado1-A" class="materias-lista">
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Ciencias Naturales" target="_blank">Ciencias Naturales</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Innovación Científica" target="_blank">Innovación Científica</a>
+                <a href="cargar_notas.php?grado=1&seccion=A&materia=Orientación" target="_blank">Orientación</a>
+            </div>
+            <a onclick="toggleMaterias('grado1-B')">Sección B</a>
+            <div id="grado1-B" class="materias-lista">
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Ciencias Naturales" target="_blank">Ciencias Naturales</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Innovación Científica" target="_blank">Innovación Científica</a>
+                <a href="cargar_notas.php?grado=1&seccion=B&materia=Orientación" target="_blank">Orientación</a>
+            </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grado-item">
+        <h2 onclick="toggleSecciones('grado2')">2do Grado</h2>
+        <div id="grado2" class="secciones-lista">
+            <a onclick="toggleMaterias('grado2-A')">Sección A</a>
+            <div id="grado2-A" class="materias-lista">
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Ciencias Naturales" target="_blank">Ciencias Naturales</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Innovación Científica" target="_blank">Innovación Científica</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Orientación" target="_blank">Orientación</a>
+                <a href="cargar_notas.php?grado=2&seccion=A&materia=Biología" target="_blank">Biología</a>
+            </div>
+            <a onclick="toggleMaterias('grado2-B')">Sección B</a>
+            <div id="grado2-B" class="materias-lista">
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Ciencias Naturales" target="_blank">Ciencias Naturales</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Innovación Científica" target="_blank">Innovación Científica</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Orientación" target="_blank">Orientación</a>
+                <a href="cargar_notas.php?grado=2&seccion=B&materia=Biología" target="_blank">Biología</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grado-item">
+        <h2 onclick="toggleSecciones('grado3')">3er Grado</h2>
+        <div id="grado3" class="secciones-lista">
+            <a onclick="toggleMaterias('grado3-A')">Sección A</a>
+            <div id="grado3-A" class="materias-lista">
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=3&seccion=A&materia=Orientación" target="_blank">Orientación</a>
+            </div>
+            <a onclick="toggleMaterias('grado3-B')">Sección B</a>
+            <div id="grado3-B" class="materias-lista">
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=GHC" target="_blank">GHC</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Arte y Patrimonio" target="_blank">Arte y Patrimonio</a>
+                <a href="cargar_notas.php?grado=3&seccion=B&materia=Orientación" target="_blank">Orientación</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grado-item">
+        <h2 onclick="toggleSecciones('grado4')">4to Grado</h2>
+        <div id="grado4" class="secciones-lista">
+            <a onclick="toggleMaterias('grado4-A')">Sección A</a>
+            <div id="grado4-A" class="materias-lista">
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Historia de Venezuela" target="_blank">Historia de Venezuela</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Geografía de Venezuela" target="_blank">Geografía de Venezuela</a>
+                <a href="cargar_notas.php?grado=4&seccion=A&materia=Formación Ciudadana" target="_blank">Formación Ciudadana</a>
+            </div>
+            <a onclick="toggleMaterias('grado4-B')">Sección B</a>
+            <div id="grado4-B" class="materias-lista">
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Historia de Venezuela" target="_blank">Historia de Venezuela</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Geografía de Venezuela" target="_blank">Geografía de Venezuela</a>
+                <a href="cargar_notas.php?grado=4&seccion=B&materia=Formación Ciudadana" target="_blank">Formación Ciudadana</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grado-item">
+        <h2 onclick="toggleSecciones('grado5')">5to Grado</h2>
+        <div id="grado5" class="secciones-lista">
+            <a onclick="toggleMaterias('grado5-A')">Sección A</a>
+            <div id="grado5-A" class="materias-lista">
+                <a href="cargar_notas.php?grado=5&seccion=5&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Historia Universal" target="_blank">Historia Universal</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Geografía General" target="_blank">Geografía General</a>
+                <a href="cargar_notas.php?grado=5&seccion=A&materia=Filosofía" target="_blank">Filosofía</a>
+            </div>
+            <a onclick="toggleMaterias('grado5-B')">Sección B</a>
+            <div id="grado5-B" class="materias-lista">
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Castellano" target="_blank">Castellano</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Inglés" target="_blank">Inglés</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Matemática" target="_blank">Matemática</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Educación Física" target="_blank">Educación Física</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Física" target="_blank">Física</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Química" target="_blank">Química</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Biología" target="_blank">Biología</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Historia Universal" target="_blank">Historia Universal</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Geografía General" target="_blank">Geografía General</a>
+                <a href="cargar_notas.php?grado=5&seccion=B&materia=Filosofía" target="_blank">Filosofía</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="opciones-generales">
+        <a href="ver_mis_cursos.html">Ver Todos Mis Cursos</a>
+        <a href="reportes_profesor.html">Reportes</a>
+        <a href="perfil_profesor.html">Mi Perfil</a>
+        <a href="cerrar_sesion.html">Cerrar Sesión</a>
+    </div>
+
+    <script>
+        function toggleSecciones(id) {
+            var lista = document.getElementById(id);
+            lista.style.display = lista.style.display === "none" ? "block" : "none";
+        }
+
+        function toggleMaterias(id) {
+            var listaMaterias = document.getElementById(id);
+            listaMaterias.style.display = listaMaterias.style.display === "none" ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
